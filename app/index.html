@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="ruderiTreia001App">
     <head>
         <meta charset="utf-8">
         <title></title>
@@ -15,11 +15,11 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="ruderiTreia001App">
+    <body ng-controller="root" ng-style="{'background-image':'url('+backgroundImage+')'}">
         <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div style="">
+        <div>
 
 
             <div class="main-navbar navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -76,8 +76,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers.js"></script>
         <!-- endbuild -->
     </body>
 </html>
