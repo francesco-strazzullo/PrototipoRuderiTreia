@@ -5,7 +5,10 @@ angular.module('ruderiTreia001App')
                 
               $scope.index = 0;
               $scope.images = [
-                'sanvicino.jpg'
+                'sanvicino.jpg',
+                'girasoli.jpg',
+                'paesaggio3.jpg',
+                'paesaggio1.jpg'
               ];
               $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
               
