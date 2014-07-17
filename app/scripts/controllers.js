@@ -3,7 +3,10 @@
 angular.module('ruderiTreia001App')
         .controller('root', ['$scope',function($scope) {
               $scope.images = [
-                'sanvicino.jpg'
+                'sanvicino.jpg',
+                'girasoli.jpg',
+                'paesaggio3.jpg',
+                'paesaggio1.jpg'
               ];
               $scope.backgroundImage = 'images/' + $scope.images[0];
         }])
