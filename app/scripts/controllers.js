@@ -14,6 +14,9 @@ angular.module('ruderiTreia001App')
               
               $scope.next = function(){
                   $scope.index++;
+                  if($scope.index >= $scope.images.length){
+                      $scope.index = 0;
+                  }
                   $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
               };
         }])
