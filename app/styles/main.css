@@ -11,3 +11,28 @@ body {
 .main-navbar{
     margin-top: 15px;
 }
+
+.btn-video{
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    bottom: 20px;
+}
+
+.position-bottom-right{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.button {    
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: black;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
