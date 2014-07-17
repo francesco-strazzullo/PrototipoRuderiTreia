@@ -2,10 +2,17 @@
 
 angular.module('ruderiTreia001App')
         .controller('root', ['$scope',function($scope) {
+                
+              $scope.index = 0;
               $scope.images = [
                 'sanvicino.jpg'
               ];
-              $scope.backgroundImage = 'images/' + $scope.images[0];
+              $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
+              
+              $scope.next = function(){
+                  $scope.index++;
+                  $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
+              };
         }])
         .controller('home', ['$scope',function($scope) {
               
