@@ -1,6 +1,7 @@
 node_modules
 dist
 .tmp
+.ftppass
 .sass-cache
 bower_components
 /nbproject/private/

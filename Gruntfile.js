@@ -11,6 +11,8 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
+  
+  grunt.loadNpmTasks('grunt-ftp-deploy');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -289,6 +291,19 @@ module.exports = function (grunt) {
         }]
       }
     },
+    
+    'ftp-deploy': {
+        build: {
+          auth: {
+            host: 'ftp.francescostrazzullo.info',
+            port: 21,
+            authKey: 'key1'
+          },
+          src: '<%= yeoman.dist %>',
+          dest: '/www.francescostrazzullo.info/blog/demo/RuderiTreia',
+          exclusions: ['.htaccess']
+        }
+      },
 
     // Replace Google CDN references
     cdnify: {
@@ -407,5 +422,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+  
+  grunt.registerTask('deploy', [
+    'build',
+    'ftp-deploy'
   ]);
 };
