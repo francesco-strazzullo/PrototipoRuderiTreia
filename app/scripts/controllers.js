@@ -11,7 +11,7 @@ angular.module('ruderiTreia001App')
                     'paesaggio1.jpg'
                 ];
                 $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
-                
+
                 $scope.next = function() {
                     $scope.index++;
                     if ($scope.index >= $scope.images.length) {
@@ -22,11 +22,11 @@ angular.module('ruderiTreia001App')
 
             }])
         .controller('home', ['$scope', 'dialogs', function($scope, dialogs) {
-                
-                $scope.showVideo = function(){
-                    var dlg = dialogs.create('/dialogs/intro.html',null,{},{size:'lg'});
+
+                $scope.showVideo = function() {
+                    var dlg = dialogs.create('/dialogs/intro.html', null, {}, {size: 'lg'});
                 };
             }])
-        .controller('about', ['$scope',function($scope) {
-               
+        .controller('about', ['$scope', function($scope) {
+
             }]);
