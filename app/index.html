@@ -15,10 +15,48 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
-    <body ng-controller="root" ng-style="{'background':'url('+backgroundImage+') no-repeat center center fixed'}">
+    <body ng-controller="root">
         <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <div id="carouselContainer" class="container fill">
+            <div id="backgroundCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="fill"  style="background-image:url('images/sanvicino.jpg');">
+                            <div class="carousel-caption">
+                                <h3>Un viaggio nelle Marche, non frettoloso, porta a vedere meraviglie.</h3>
+                                <p>Guido Piovene</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="fill"  style="background-image:url('images/girasoli.jpg');">
+                            <div class="container">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" style="background-image:url('images/paesaggio3.jpg');">
+                            <div class="container">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" style="background-image:url('images/paesaggio1.jpg');">
+                            <div class="container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div class="main-navbar navbar navbar-inverse" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -49,11 +87,14 @@
                 <div class="col-lg-1"></div>
             </div>           
         </div>
-       
+
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    </div>
                     <div class="modal-body">
                         <div id="player"></div>
                     </div>

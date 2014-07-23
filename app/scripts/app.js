@@ -30,6 +30,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }).run(function($templateCache){
-    $templateCache.put('/dialogs/intro.html','<div style="text-align:center;"><iframe width="640" height="360" src="//www.youtube.com/embed/RUq7tbuH00E?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
   });

@@ -3,17 +3,8 @@
 angular.module('ruderiTreia001App')
         .controller('root', ['$scope', function($scope) {
 
-                $scope.index = 0;
-                $scope.images = [
-                    'sanvicino.jpg',
-                    'girasoli.jpg',
-                    'paesaggio3.jpg',
-                    'paesaggio1.jpg'
-                ];
-                $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
-
                 $scope.playerReady = false;
-
+        
                 $scope.$on('$viewContentLoaded', function() {
 
                     //Carico lo script a runtime, dato che non può essere scaricato
@@ -39,7 +30,7 @@ angular.module('ruderiTreia001App')
                                     });
 
                                     $scope.playerReady = true;
-                                    $scope.apply();
+                                    $scope.$apply();
                                 }
                             }
                         });
