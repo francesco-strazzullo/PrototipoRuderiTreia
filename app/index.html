@@ -72,6 +72,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#/about">About</a></li>
+                         <li><a href="#/houses">Houses</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -79,13 +80,7 @@
         </div>       
 
         <div class="container" style="margin-top: 65px">
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10">
-                    <div ng-view></div>
-                </div>
-                <div class="col-lg-1"></div>
-            </div>           
+            <div ng-view></div>
         </div>
 
         <!-- Modal -->
@@ -123,6 +118,7 @@
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/underscore.string/index.js"></script>
         <script src="bower_components/fitVidjs/jquery.fitvids.js"></script>
+        <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -130,15 +126,16 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers.js"></script>
         <script src="scripts/directives.js"></script>
+        <script src="scripts/services.js"></script>
         <script>
-                                        //HACK: in mobile non viene chiuso il menu
-                                        $('.nav li ').not('.dropdown-toggle').on('click', function() {
-                                            var element = jQuery('.navbar-toggle');
-                                            if (element.css('display') !== 'none') {
-                                                jQuery('.navbar-toggle').click();
-                                            }
-                                        });
-        </script>
-        <!-- endbuild -->        
+            //HACK: in mobile non viene chiuso il menu
+            $('.nav li ').not('.dropdown-toggle').on('click', function() {
+                var element = jQuery('.navbar-toggle');
+                if (element.css('display') !== 'none') {
+                    jQuery('.navbar-toggle').click();
+                }
+            });
+        </script> 
+        <!-- endbuild -->
     </body>
 </html>

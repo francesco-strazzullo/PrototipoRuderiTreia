@@ -3,11 +3,11 @@
 angular.module('ruderiTreia001App')
         .controller('root', ['$location', '$scope', function($location, $scope) {
 
-                $scope.playerReady = false;               
+                $scope.playerReady = false;
 
                 $scope.$on('$routeChangeSuccess', function() {
-                    $scope.currentPath = $location.path(); 
-                });        
+                    $scope.currentPath = $location.path();
+                });
 
                 $scope.$on('$viewContentLoaded', function() {
 
@@ -43,6 +43,23 @@ angular.module('ruderiTreia001App')
 
             }])
         .controller('home', ['$scope', function($scope) {
+
+            }])
+        .controller('houses', ['$scope', 'housesRepository', function($scope, housesRepository) {
+                $scope.houses = [];
+
+                $scope.load = function() {
+                    housesRepository.list().then(function(data) {
+                        $scope.houses = _.union($scope.houses, data);
+                    });
+                };
+
+
+                $scope.onPage = function() {
+                    $scope.load();
+                };
+
+                $scope.load();
 
             }])
         .controller('about', ['$scope', function($scope) {
