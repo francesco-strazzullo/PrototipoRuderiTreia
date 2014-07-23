@@ -12,15 +12,16 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "angular-bootstrap": "~0.11.0",
     "underscore": "*",
     "underscore.string": "http://epeli.github.io/underscore.string/lib/underscore.string.js",
-    "angular-dialog": "https://github.com/m-e-conroy/angular-dialog-service.git#latest",
-    "fitVidjs":"https://github.com/davatron5000/FitVids.js.git#latest"
+    "fitVidjs": "https://github.com/davatron5000/FitVids.js.git#latest"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "resolutions": {
+    "bootstrap": "3.1.x"
+  }
 }

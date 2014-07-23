@@ -12,21 +12,44 @@ angular.module('ruderiTreia001App')
                 ];
                 $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
 
-                $scope.next = function() {
-                    $scope.index++;
-                    if ($scope.index >= $scope.images.length) {
-                        $scope.index = 0;
-                    }
-                    $scope.backgroundImage = 'images/' + $scope.images[$scope.index];
-                };
+                $scope.playerReady = false;
+
+                $scope.$on('$viewContentLoaded', function() {
+
+                    //Carico lo script a runtime, dato che non può essere scaricato
+                    var tag = document.createElement('script');
+
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                    window.onYouTubeIframeAPIReady = function() {
+                        $scope.player = new YT.Player('player', {
+                            videoId: 'lE33AmJipMU',
+                            events: {
+                                'onReady': function() {
+                                    $('#myModal').fitVids();
+
+                                    $('#myModal').on('shown.bs.modal', function(e) {
+                                        $scope.player.playVideo();
+                                    });
+
+                                    $('#myModal').on('hide.bs.modal', function(e) {
+                                        $scope.player.stopVideo();
+                                    });
+
+                                    $scope.playerReady = true;
+                                    $scope.apply();
+                                }
+                            }
+                        });
+                    };
+                });
 
             }])
-        .controller('home', ['$scope', 'dialogs', function($scope, dialogs) {
+        .controller('home', ['$scope', function($scope) {
 
-                $scope.showVideo = function() {
-                    var dlg = dialogs.create('/dialogs/intro.html', null, {}, {size: 'lg'});
-                };
-            }])
+        }])
         .controller('about', ['$scope', function($scope) {
 
-            }]);
+        }]);

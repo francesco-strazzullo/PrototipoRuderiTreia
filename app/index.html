@@ -9,8 +9,6 @@
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="bower_components/angular-dialog/dialogs.css" />
-        <link rel="stylesheet" href="bower_components/angular-dialog/dialogs.min.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -41,15 +39,26 @@
                 </div><!--/.nav-collapse -->
             </div>
         </div>       
-        
+
         <div class="container">
-           <div class="row">
+            <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
                     <div ng-view></div>
                 </div>
                 <div class="col-lg-1"></div>
             </div>           
+        </div>
+       
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="player"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- build:js(.) scripts/oldieshim.js -->
         <!--[if lt IE 9]>
@@ -70,12 +79,8 @@
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/underscore.string/index.js"></script>
-        <script src="bower_components/angular-translate/angular-translate.js"></script>
-        <script src="bower_components/angular-dialog/dialogs.js"></script>
-        <script src="bower_components/angular-dialog/dialogs.min.js"></script>
         <script src="bower_components/fitVidjs/jquery.fitvids.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
@@ -83,6 +88,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers.js"></script>
+        <script src="scripts/directives.js"></script>
         <!-- endbuild -->
     </body>
 </html>
