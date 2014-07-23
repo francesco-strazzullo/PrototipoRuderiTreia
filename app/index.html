@@ -25,7 +25,7 @@
                 <div class="carousel-inner">
                     <div class="active item">
                         <div class="fill"  style="background-image:url('images/sanvicino.jpg');">
-                            <div class="carousel-caption" ng-show="currentPath==='/'">
+                            <div class="carousel-caption" ng-show="currentPath === '/'">
                                 <h3>Un viaggio nelle Marche, non frettoloso, porta a vedere meraviglie.</h3>
                                 <p>Guido Piovene</p>
                             </div>
@@ -131,13 +131,13 @@
         <script src="scripts/controllers.js"></script>
         <script src="scripts/directives.js"></script>
         <script>
-                            //HACK: in mobile non viene chiuso il menu
-                            $('.nav li ').not('.dropdown-toggle').on('click', function() {
-                                var element = jQuery('.navbar-toggle');
-                                if (element.css('display') !== 'none') {
-                                    jQuery('.navbar-toggle').click();
-                                }
-                            });
+                                        //HACK: in mobile non viene chiuso il menu
+                                        $('.nav li ').not('.dropdown-toggle').on('click', function() {
+                                            var element = jQuery('.navbar-toggle');
+                                            if (element.css('display') !== 'none') {
+                                                jQuery('.navbar-toggle').click();
+                                            }
+                                        });
         </script>
         <!-- endbuild -->        
     </body>
