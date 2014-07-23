@@ -1,10 +1,14 @@
 'use strict';
 
 angular.module('ruderiTreia001App')
-        .controller('root', ['$scope', function($scope) {
+        .controller('root', ['$location', '$scope', function($location, $scope) {
 
-                $scope.playerReady = false;
-        
+                $scope.playerReady = false;               
+
+                $scope.$on('$routeChangeSuccess', function() {
+                    $scope.currentPath = $location.path(); 
+                });        
+
                 $scope.$on('$viewContentLoaded', function() {
 
                     //Carico lo script a runtime, dato che non può essere scaricato
@@ -40,7 +44,7 @@ angular.module('ruderiTreia001App')
             }])
         .controller('home', ['$scope', function($scope) {
 
-        }])
+            }])
         .controller('about', ['$scope', function($scope) {
 
-        }]);
+            }]);
