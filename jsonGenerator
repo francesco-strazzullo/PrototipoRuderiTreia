@@ -1,0 +1,17 @@
+[
+  '{{repeat(5)}}',
+  {
+    id: '{{index()}}',       
+    picture: function(tags, index){
+    return 'rudere' + index.toString()+'.jpg';
+    },
+    mq: '{{integer(60, 250)}}',
+    address: '{{street()}} nr. {{integer(1, 100)}} Treia', 
+    title: function (tags, index) {
+      var fruits = ['casolare antico', 'rudere rustico', 'casolare di campagna','rudere antico', 'casolare rustico'];
+      return fruits[index];
+    } ,
+    description: '{{lorem(5)}}'
+
+  }
+]
