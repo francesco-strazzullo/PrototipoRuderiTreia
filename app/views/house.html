@@ -4,8 +4,38 @@
         <div class="img-rounded" style="background-color: white;">
             <h3>{{house.title}}</h3>
             <tabset>
-                <tab heading="Paint">
-                    <img ng-src="images/{{house.picture}}" class="img-responsive"/>
+                <tab heading="Customize">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img ng-src="images/{{house.picture}}" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="restauro">restauro</label>
+                                            <input type="checkbox" class="form-control" id="restauro">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="piscina">Piscina</label>
+                                            <input type="checkbox" class="form-control" id="piscina">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="veranda">Veranda</label>
+                                            <input type="checkbox" class="form-control" id="veranda">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </tab>
                 <tab heading="Map">
                 </tab>
