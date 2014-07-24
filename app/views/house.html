@@ -3,6 +3,13 @@
     <div class="col-lg-10">
         <div class="img-rounded" style="background-color: white;">
             <h3>{{house.title}}</h3>
+            <tabset>
+                <tab heading="Paint">
+                    <img ng-src="images/{{house.picture}}" class="img-responsive"/>
+                </tab>
+                <tab heading="Map">
+                </tab>
+            </tabset>
         </div>
     </div>
     <div class="col-lg-1"></div>
