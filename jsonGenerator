@@ -2,6 +2,7 @@
   '{{repeat(5)}}',
   {
     id: '{{index()}}',       
+    price: '{{integer(100000, 300000)}}',
     picture: function(tags, index){
     return 'rudere' + index.toString()+'.jpg';
     },

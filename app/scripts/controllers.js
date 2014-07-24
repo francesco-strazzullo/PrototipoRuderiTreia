@@ -63,9 +63,38 @@ angular.module('ruderiTreia001App')
 
             }])
         .controller('house', ['$scope', 'housesRepository', '$routeParams', function($scope, housesRepository, $routeParams) {
+                $scope.checkedAssets = {};
+                $scope.house = {};
+                $scope.price = 0;
+                        
                 housesRepository.get($routeParams.id).then(function(data) {
                     $scope.house = data;
+                    $scope.price = data.price;
                 });
+                
+                housesRepository.listAssets($routeParams.id).then(function(data) {
+                    $scope.assets = data;
+                });
+                
+                $scope.findAsset = function(id){
+                    return _.find($scope.assets,function(a){
+                        return a.id === parseInt(id,10);
+                    });
+                };
+                
+                $scope.$watch('checkedAssets',function(newValue){
+                    var keys = _.keys(newValue);
+                    
+                    $scope.price = $scope.house.price;
+                    
+                    $scope.price = _.reduce(keys, function(total, key){
+                            if(newValue[key]){
+                                return total + $scope.findAsset(key).price;
+                            }else{
+                                return total;
+                            }
+                        }, $scope.price);
+                },true);
             }])
         .controller('about', ['$scope', function($scope) {
 
