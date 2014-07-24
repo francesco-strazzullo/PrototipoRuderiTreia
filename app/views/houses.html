@@ -4,7 +4,7 @@
         <div class="img-rounded" style="background-color: white;">
             <h3>Houses</h3>
             <div class="container-fluid">
-                <div class="house-list-item img-rounded" ng-repeat="house in houses">
+                <div class="house-list-item img-rounded" ng-repeat="house in houses track by $index">
                     <div class="row">
                         <div class="col-md-12 house-list-item-title">
                             <h4 style="float: left">{{house.title}}</h4>
