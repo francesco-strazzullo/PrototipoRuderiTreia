@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/houses.html',
         controller: 'houses'
       })
+      .when('/house/:id', {
+        templateUrl: 'views/house.html',
+        controller: 'house'
+      })
       .otherwise({
         redirectTo: '/'
       });
