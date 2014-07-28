@@ -21,14 +21,14 @@ angular
             'ui.bootstrap.tabs'
         ])
         /*
-        .config(function($translateProvider) {
-            $translateProvider.useStaticFileLoader({
-                prefix: 'l10n/',
-                suffix: '.json'
-            });
-            
-            $translateProvider.preferredLanguage('it');
-        })*/
+         .config(function($translateProvider) {
+         $translateProvider.useStaticFileLoader({
+         prefix: 'l10n/',
+         suffix: '.json'
+         });
+         
+         $translateProvider.preferredLanguage('it');
+         })*/
         .config(function($routeProvider) {
             $routeProvider
                     .when('/', {
@@ -50,9 +50,14 @@ angular
                     .otherwise({
                         redirectTo: '/'
                     });
-        }).run(function (){
+        }).run(function() {
             //HACK: in mobile non viene chiuso il menu
-            $('.nav li ').on('click', function() {
-               jQuery('.navbar-toggle').click();
+            $('.nav li ').not('.dropdown-toggle').on('click', function() {
+                var element = jQuery('.navbar-toggle');
+                if (element.css('display') !== 'none') {
+                    jQuery('.navbar-toggle').click();
+                }
             });
+
+            FastClick.attach(document.body);
         });
