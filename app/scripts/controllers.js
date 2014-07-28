@@ -7,6 +7,7 @@ angular.module('ruderiTreia001App')
 
                 $scope.$on('$routeChangeSuccess', function() {
                     $scope.currentPath = $location.path();
+                    window.scrollTo(0,0);
                 });
 
                 $scope.$on('$viewContentLoaded', function() {

@@ -98,3 +98,7 @@ html,body{height:100%;}
 #viewContainer{
     padding-top: 80px;
 }
+
+#splash{
+    background: rgba(238, 238, 238, 0.6);
+}
