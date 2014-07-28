@@ -48,6 +48,36 @@ angular.module('ruderiTreia001App')
         .controller('houses', ['$scope', 'housesRepository', function($scope, housesRepository) {
                 $scope.houses = [];
 
+                $scope.squareMeters = [
+                    {name: '0', value: 0},
+                    {name: '50', value: 50},
+                    {name: '80', value: 80},
+                    {name: '100', value: 100},
+                    {name: '150', value: 150},
+                    {name: '200', value: 200},
+                    {name: '250', value: 250},  
+                    {name: '300+', value: 10.000}
+                ];
+
+                $scope.selectedSquareMeterTo = $scope.squareMeters[0];
+                $scope.selectedSquareMeterFrom = $scope.squareMeters[($scope.squareMeters.length) - 1];
+
+                $scope.prices = [
+                    0, 80.000, 100.000, 150.000, 200.000, 250.000, 350.000,
+                ];
+                $scope.prices = [
+                    {name: '0', value: 0},
+                    {name: '100.000', value: 100000},
+                    {name: '150.000', value: 150000},
+                    {name: '200.000', value: 200000},
+                    {name: '250.000', value: 250000},
+                    {name: '350.000', value: 350000},  
+                    {name: '500.000+', value: 500000000}
+                ];
+
+                $scope.selectedPriceTo = $scope.prices[0];
+                $scope.selectedPriceFrom = $scope.prices[($scope.prices.length) - 1];
+
                 $scope.load = function() {
                     housesRepository.list().then(function(data) {
                         $scope.houses = $scope.houses.concat(data);

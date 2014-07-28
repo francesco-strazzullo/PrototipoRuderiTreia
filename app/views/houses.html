@@ -2,7 +2,14 @@
     <div class="col-lg-1"></div>
     <div class="col-lg-10">
         <div class="img-rounded" style="background-color: white;">
-            <h3>Houses</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3  style="float: left">Houses</h3> 
+                    <a class="filter-button" style="float: right;margin: 10px 10px 0px 0px" data-toggle="modal" data-target="#myModalFilter">
+                        <span style="margin-top: 4px; color: white;font-size: large" > Filters</span>
+                    </a>
+                </div>               
+            </div> 
             <div class="container-fluid">
                 <div class="house-list-item img-rounded" ng-repeat="house in houses track by $index">
                     <div class="row">
@@ -27,4 +34,55 @@
         </div>
     </div>
     <div class="col-lg-1"></div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModalFilter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="vertical-align: middle">
+                    <div class="row">
+                        <span style="float: left;font-size: 1.5em">Filters</span>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-md-3">
+                            <small >Square Meter</small>
+                          </div>   
+                        <div class="col-md-3">
+                            <small>from:</small>
+                            <select ng-model="selectedSquareMeterTo" ng-options="squareMeter.name for squareMeter in squareMeters">
+                            </select>
+                            <small>m&#178;</small>
+                         </div>  
+                        <div class="col-md-6">                            
+                            <small>to:</small>
+                            <select ng-model="selectedSquareMeterFrom" ng-options="squareMeter.name for squareMeter in squareMeters">
+                            </select>
+                            <small>m&#178;</small>
+                        </div>                        
+                    </div>
+                    <div class="row" style="margin-top: 10px">                        
+                         <div class="col-md-3">
+                            <small>Price</small>
+                          </div>  
+                         <div class="col-md-3">
+                            <small>from:</small>
+                            <select ng-model="selectedPriceTo" ng-options="price.name for price in prices">
+                            </select>
+                            <small style="margin-right: 25px">&#128;</small>
+                             </div>  
+                        <div class="col-md-6">
+                            <small>to:</small>
+                            <select ng-model="selectedPriceFrom" ng-options="price.name for price in prices">
+                            </select>
+                            <small>&#128;</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>     
