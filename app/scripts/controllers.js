@@ -42,8 +42,10 @@ angular.module('ruderiTreia001App')
                 });
 
             }])
-        .controller('home', ['$scope', function($scope) {
-
+        .controller('home', ['$scope','$location', function($scope,$location) {
+                $scope.goToHouse = function(){
+                    $location.path("/house/0");
+                };
             }])
         .controller('houses', ['$scope', 'housesRepository', function($scope, housesRepository) {
                 $scope.houses = [];
