@@ -120,6 +120,7 @@
         <script src="bower_components/underscore.string/index.js"></script>
         <script src="bower_components/fitVidjs/jquery.fitvids.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -129,15 +130,6 @@
         <script src="scripts/controllers.js"></script>
         <script src="scripts/directives.js"></script>
         <script src="scripts/services.js"></script>
-        <script>
-            //HACK: in mobile non viene chiuso il menu
-            $('.nav li ').not('.dropdown-toggle').on('click', function() {
-                var element = jQuery('.navbar-toggle');
-                if (element.css('display') !== 'none') {
-                    jQuery('.navbar-toggle').click();
-                }
-            });
-        </script> 
         <!-- endbuild -->
     </body>
 </html>

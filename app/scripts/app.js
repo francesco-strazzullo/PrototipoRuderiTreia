@@ -50,4 +50,9 @@ angular
                     .otherwise({
                         redirectTo: '/'
                     });
+        }).run(function (){
+            //HACK: in mobile non viene chiuso il menu
+            $('.nav li ').on('click', function() {
+               jQuery('.navbar-toggle').click();
+            });
         });

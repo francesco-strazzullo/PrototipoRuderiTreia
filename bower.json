@@ -16,7 +16,8 @@
     "underscore.string": "http://epeli.github.io/underscore.string/lib/underscore.string.js",
     "fitVidjs": "https://github.com/davatron5000/FitVids.js.git#latest",
     "ngInfiniteScroll": "~1.1.2",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "angular-translate": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
