@@ -22,6 +22,10 @@ angular
             'pascalprecht.translate'
         ])        
         .config(function($translateProvider) {
+//            $translateProvider.translations('it', {
+//                WELCOME: 'Benvenuto',
+//                ALL_YEARS: 'Tutti gli anni'
+//            });
             $translateProvider.useStaticFilesLoader({
                 prefix: 'l10n/',
                 suffix: '.json'
