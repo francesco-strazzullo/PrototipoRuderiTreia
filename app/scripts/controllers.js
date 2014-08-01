@@ -7,6 +7,7 @@ angular.module('ruderiTreia001App')
 
                 $scope.$on('$routeChangeSuccess', function() {
                     $scope.currentPath = $location.path();
+                    window.scrollTo(0,0);
                 });
 
                 $scope.$on('$viewContentLoaded', function() {
@@ -42,8 +43,10 @@ angular.module('ruderiTreia001App')
                 });
 
             }])
-        .controller('home', ['$scope', function($scope) {
-
+        .controller('home', ['$scope','$location', function($scope,$location) {
+                $scope.goToHouse = function(){
+                    $location.path("/house/0");
+                };
             }])
         .controller('houses', ['$scope', 'housesRepository', function($scope, housesRepository) {
                 $scope.houses = [];

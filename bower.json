@@ -17,7 +17,8 @@
     "fitVidjs": "https://github.com/davatron5000/FitVids.js.git#latest",
     "ngInfiniteScroll": "~1.1.2",
     "fontawesome": "~4.1.0",
-    "angular-translate": "*"
+    "angular-translate": "*",
+    "fastclick": "~1.0.2"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

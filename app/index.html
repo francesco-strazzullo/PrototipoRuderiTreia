@@ -26,7 +26,7 @@
                 <div class="carousel-inner">
                     <div class="active item">
                         <div class="fill"  style="background-image:url('images/sanvicino.jpg');">
-                            <div class="carousel-caption" ng-show="currentPath === '/'">
+                            <div class="hidden-xs carousel-caption" ng-show="currentPath === '/'">
                                 <h3>{{'QUOTE1' | translate}}</h3>
                                 <p>Guido Piovene</p>
                             </div>
@@ -71,16 +71,16 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">{{'HOME' | translate}}</a></li>
-                        <li><a href="#/about">{{'ABOUT' | translate}}</a></li>
-                         <li><a href="#/houses">{{'HOUSES' | translate}}</a></li>
-                        <li><a href="#contact">{{'CONTACT' | translate}}</a></li>
+                        <li ng-class="{'active':currentPath === '/'}"><a href="#">{{'HOME' | translate}}</a></li>
+                        <li ng-class="{'active':currentPath === '/houses' || currentPath === '/house'}"><a href="#/houses">{{'HOUSES' | translate}}</a></li>
+                        <li ng-class="{'active':currentPath === '/contact'}"><a href="#contact">{{'CONTACT' | translate}}</a></li>
+                        <li ng-class="{'active':currentPath === '/about'}"><a href="#/about">{{'ABOUT' | translate}}</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </div>       
 
-        <div class="container" style="margin-top: 65px">
+        <div id="viewContainer" class="container">
             <div ng-view></div>
         </div>
 
@@ -121,6 +121,7 @@
         <script src="bower_components/fitVidjs/jquery.fitvids.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/fastclick/lib/fastclick.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
