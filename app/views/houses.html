@@ -4,9 +4,9 @@
         <div class="img-rounded" style="background-color: white;">
             <div class="row">
                 <div class="col-md-12">
-                    <h3  style="float: left">Houses</h3> 
+                    <h3  style="float: left">{{'HOUSES' | translate}}</h3> 
                     <a class="filter-button" style="float: right;margin: 10px 10px 0px 0px" data-toggle="modal" data-target="#myModalFilter">
-                        <span style="margin-top: 4px; color: white;font-size: large" > Filters</span>
+                        <span style="margin-top: 4px; color: white;font-size: large" > {{'FILTERS' | translate}}</span>
                     </a>
                 </div>               
             </div> 
@@ -42,23 +42,23 @@
             <div class="modal-content">
                 <div class="modal-header" style="vertical-align: middle">
                     <div class="row">
-                        <span style="float: left;font-size: 1.5em">Filters</span>
+                        <span style="float: left;font-size: 1.5em">{{'FILTERS' | translate}}</span>
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     </div>
                 </div>
                 <div class="modal-body">
                     <div class="row" style="margin-top: 10px">
                         <div class="col-md-3">
-                            <small >Square Meter</small>
+                            <small >{{'SQUAREMETERS' | translate}}</small>
                           </div>   
                         <div class="col-md-3">
-                            <small>from:</small>
+                            <small>{{'FROM' | translate}}:</small>
                             <select ng-model="selectedSquareMeterTo" ng-options="squareMeter.name for squareMeter in squareMeters">
                             </select>
                             <small>m&#178;</small>
                          </div>  
                         <div class="col-md-6">                            
-                            <small>to:</small>
+                            <small>{{'TO' | translate}}:</small>
                             <select ng-model="selectedSquareMeterFrom" ng-options="squareMeter.name for squareMeter in squareMeters">
                             </select>
                             <small>m&#178;</small>
@@ -66,20 +66,23 @@
                     </div>
                     <div class="row" style="margin-top: 10px">                        
                          <div class="col-md-3">
-                            <small>Price</small>
+                            <small>{{'PRICE' | translate}}</small>
                           </div>  
                          <div class="col-md-3">
-                            <small>from:</small>
+                            <small>{{'FROM' | translate}}:</small>
                             <select ng-model="selectedPriceTo" ng-options="price.name for price in prices">
                             </select>
                             <small style="margin-right: 25px">&#128;</small>
                              </div>  
                         <div class="col-md-6">
-                            <small>to:</small>
+                            <small>{{'TO' | translate}}:</small>
                             <select ng-model="selectedPriceFrom" ng-options="price.name for price in prices">
                             </select>
                             <small>&#128;</small>
                         </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px">                        
+                        <button type="button" class="close" data-dismiss="modal"><span>{{'APPLY' | translate}}</span></button>
                     </div>
                 </div>
             </div>

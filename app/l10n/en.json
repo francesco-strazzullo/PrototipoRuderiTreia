@@ -1,3 +1,13 @@
 {
-    "name": "Luca"
+    "HOME": "Home",
+    "HOUSES": "Houses",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "QUOTE1": "A trip to the Marche, not rushed, leads us to see wonders.",
+    "FILTERS": "Filters",
+    "SQUAREMETERS": "Square Meters",
+    "FROM": "From",
+    "TO": "To",
+    "PRICE": "Price",
+    "APPLY" : "Apply"
 }

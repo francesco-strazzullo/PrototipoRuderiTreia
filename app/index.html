@@ -27,7 +27,7 @@
                     <div class="active item">
                         <div class="fill"  style="background-image:url('images/sanvicino.jpg');">
                             <div class="carousel-caption" ng-show="currentPath === '/'">
-                                <h3>Un viaggio nelle Marche, non frettoloso, porta a vedere meraviglie.</h3>
+                                <h3>{{'QUOTE1' | translate}}</h3>
                                 <p>Guido Piovene</p>
                             </div>
                         </div>
@@ -71,10 +71,10 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#/about">About</a></li>
-                         <li><a href="#/houses">Houses</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active"><a href="#">{{'HOME' | translate}}</a></li>
+                        <li><a href="#/about">{{'ABOUT' | translate}}</a></li>
+                         <li><a href="#/houses">{{'HOUSES' | translate}}</a></li>
+                        <li><a href="#contact">{{'CONTACT' | translate}}</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -130,6 +130,7 @@
         <script src="scripts/controllers.js"></script>
         <script src="scripts/directives.js"></script>
         <script src="scripts/services.js"></script>
+        <script src="scripts/loader-static-files.js"></script>
         <!-- endbuild -->
     </body>
 </html>

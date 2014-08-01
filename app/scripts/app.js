@@ -18,17 +18,21 @@ angular
             'ngTouch',
             'infinite-scroll',
             'ui.bootstrap',
-            'ui.bootstrap.tabs'
-        ])
-        /*
+            'ui.bootstrap.tabs',
+            'pascalprecht.translate'
+        ])        
         .config(function($translateProvider) {
-            $translateProvider.useStaticFileLoader({
+//            $translateProvider.translations('it', {
+//                WELCOME: 'Benvenuto',
+//                ALL_YEARS: 'Tutti gli anni'
+//            });
+            $translateProvider.useStaticFilesLoader({
                 prefix: 'l10n/',
                 suffix: '.json'
             });
-            
+
             $translateProvider.preferredLanguage('it');
-        })*/
+        })
         .config(function($routeProvider) {
             $routeProvider
                     .when('/', {

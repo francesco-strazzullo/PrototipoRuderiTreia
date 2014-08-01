@@ -1,4 +1,13 @@
 {
     "HOME": "Home",
-    "HOUSES": "Case"
+    "HOUSES": "Case",
+    "ABOUT": "About",
+    "CONTACT": "Contatti",
+    "QUOTE1": "Un viaggio nelle Marche, non frettoloso, porta a vedere meraviglie.",
+    "FILTERS": "Filtri",
+    "SQUAREMETERS": "Metri quadri",
+    "FROM": "Da",
+    "TO": "A",
+    "PRICE": "Prezzo",
+    "APPLY" : "Applica"
 }
