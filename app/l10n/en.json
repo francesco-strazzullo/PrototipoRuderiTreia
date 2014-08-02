@@ -9,5 +9,7 @@
     "FROM": "From",
     "TO": "To",
     "PRICE": "Price",
-    "APPLY" : "Apply"
+    "APPLY" : "Apply",
+    "ITALIAN": "Italian",
+    "ENGLISH": "English"
 }

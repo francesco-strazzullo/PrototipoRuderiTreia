@@ -4,6 +4,7 @@ angular.module('ruderiTreia001App')
         .controller('root', ['$location', '$scope', '$translate', function($location, $scope, $translate) {
 
                 $scope.playerReady = false;
+                $scope.language = $translate.preferredLanguage();
 
                 $scope.$on('$routeChangeSuccess', function() {
                     $scope.currentPath = $location.path();
@@ -11,6 +12,7 @@ angular.module('ruderiTreia001App')
                 });
 
                 $scope.changeLanguage = function(language) {
+                    $scope.language = language;
                     $translate.use(language);
                 };
 

@@ -52,7 +52,7 @@ angular
                     });
         }).run(function() {
             //HACK: in mobile non viene chiuso il menu
-            $('.nav li ').not('.dropdown-toggle').on('click', function() {
+            $('.nav li ').not('.dropdown-toggle').not('.dropdown').on('click', function() {
                 var element = jQuery('.navbar-toggle');
                 if (element.css('display') !== 'none') {
                     jQuery('.navbar-toggle').click();
