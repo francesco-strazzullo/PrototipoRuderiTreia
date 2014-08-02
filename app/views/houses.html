@@ -6,7 +6,7 @@
                 <div class="col-md-12">
                     <h3  style="float: left">{{'HOUSES' | translate}}</h3> 
                     <a class="filter-button" style="float: right;margin: 10px 10px 0px 0px" data-toggle="modal" data-target="#myModalFilter">
-                        <span style="margin-top: 4px; color: white;font-size: large" > {{'FILTERS' | translate}}</span>
+                        <span style="margin-top: 10px; color: white;font-size: large; cursor:pointer;" > {{'FILTERS' | translate}}</span>
                     </a>
                 </div>               
             </div> 
@@ -43,7 +43,7 @@
                 <div class="modal-header" style="vertical-align: middle">
                     <div class="row">
                         <span style="float: left;font-size: 1.5em">{{'FILTERS' | translate}}</span>
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <!--            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
                     </div>
                 </div>
                 <div class="modal-body">
@@ -81,8 +81,8 @@
                             <small>&#128;</small>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 10px">                        
-                        <button type="button" class="close" data-dismiss="modal"><span>{{'APPLY' | translate}}</span></button>
+                    <div class="row" style="margin-top: 30px; width: 100%;text-align: center">                        
+                        <button type="button" class="close" style="float:none" data-dismiss="modal" ng-click="applyFilter()"><span style="text-align: center">{{'APPLY' | translate}}</span></button>
                     </div>
                 </div>
             </div>

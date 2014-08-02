@@ -1,14 +1,18 @@
 'use strict';
 
 angular.module('ruderiTreia001App')
-        .controller('root', ['$location', '$scope', function($location, $scope) {
+        .controller('root', ['$location', '$scope', '$translate', function($location, $scope, $translate) {
 
                 $scope.playerReady = false;
 
                 $scope.$on('$routeChangeSuccess', function() {
                     $scope.currentPath = $location.path();
-                    window.scrollTo(0,0);
+                    window.scrollTo(0, 0);
                 });
+
+                $scope.changeLanguage = function(language) {
+                    $translate.use(language);
+                };
 
                 $scope.$on('$viewContentLoaded', function() {
 
@@ -43,8 +47,8 @@ angular.module('ruderiTreia001App')
                 });
 
             }])
-        .controller('home', ['$scope','$location', function($scope,$location) {
-                $scope.goToHouse = function(){
+        .controller('home', ['$scope', '$location', function($scope, $location) {
+                $scope.goToHouse = function() {
                     $location.path("/house/0");
                 };
             }])
@@ -58,7 +62,7 @@ angular.module('ruderiTreia001App')
                     {name: '100', value: 100},
                     {name: '150', value: 150},
                     {name: '200', value: 200},
-                    {name: '250', value: 250},  
+                    {name: '250', value: 250},
                     {name: '300+', value: 10.000}
                 ];
 
@@ -74,7 +78,7 @@ angular.module('ruderiTreia001App')
                     {name: '150.000', value: 150000},
                     {name: '200.000', value: 200000},
                     {name: '250.000', value: 250000},
-                    {name: '350.000', value: 350000},  
+                    {name: '350.000', value: 350000},
                     {name: '500.000+', value: 500000000}
                 ];
 
@@ -87,6 +91,9 @@ angular.module('ruderiTreia001App')
                     });
                 };
 
+                $scope.applyFilter = function() {
+                    //      alert('selezionato:'+ $scope.selectedPriceTo.value);
+                };
 
                 $scope.onPage = function() {
                     $scope.load();
