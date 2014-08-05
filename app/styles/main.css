@@ -40,9 +40,7 @@ html,body{height:100%;}
 }
 
 .filter-button {    
-    display: block;
-    width: 80px;
-    height: 35px;
+    display: block;   
     background: black;
     text-align: center;
     vertical-align: middle;
