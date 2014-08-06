@@ -11,5 +11,12 @@
     "PRICE": "Prezzo",
     "APPLY" : "Applica",
     "ITALIAN": "Italiano",
-    "ENGLISH": "Inglese"
+    "ENGLISH": "Inglese",
+    "CUSTOMIZE": "Personalizza",
+    "ADDITIONAL_INFO": "Info",
+    "DESCRIPTION":"Descrizione",
+    "MAP":"Mappa",
+    "ADDRESS": "Indirizzo",
+    "MQ":"Dimensione",
+    "ROOMS":"Stanze"
 }

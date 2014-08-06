@@ -127,3 +127,8 @@ html,body{height:100%;}
     background-color: #000;
 }
 
+.house-title{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+

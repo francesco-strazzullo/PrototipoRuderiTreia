@@ -11,5 +11,12 @@
     "PRICE": "Price",
     "APPLY" : "Apply",
     "ITALIAN": "Italian",
-    "ENGLISH": "English"
+    "ENGLISH": "English",
+    "CUSTOMIZE": "Customize",
+    "ADDITIONAL_INFO": "Info",
+    "DESCRIPTION":"Description",
+    "MAP":"Map",
+    "ADDRESS": "Address",
+    "MQ":"Size",
+    "ROOMS":"Rooms"
 }
