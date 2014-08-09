@@ -32,6 +32,8 @@ module.exports = function(config) {
       'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/fastclick/lib/fastclick.js',
+      'bower_components/underscore/underscore.js',
+      'bower_components/underscore.string/index.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'

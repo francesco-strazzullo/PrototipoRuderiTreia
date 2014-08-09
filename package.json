@@ -39,6 +39,8 @@
     "karma-opera-launcher": "*",
     "karma-phantomjs-launcher": "*",
     "ng-midway-tester": "2.0.5",
+    "underscore":"*",
+    "underscore.string":"*",
     "protractor": "~0.18.0",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1"

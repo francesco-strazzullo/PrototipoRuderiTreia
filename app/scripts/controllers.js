@@ -51,6 +51,7 @@ angular.module('ruderiTreia001App')
             }])
         .controller('home', ['$scope', '$location', function($scope, $location) {
                 $scope.goToHouse = function() {
+                    //TODO: sceglierla random
                     $location.path("/house/0");
                 };
             }])
