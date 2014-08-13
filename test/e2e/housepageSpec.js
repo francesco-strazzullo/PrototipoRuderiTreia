@@ -12,8 +12,6 @@ var AppHousePage = function() {
 
 describe('House page', function() {
     it('should have a central button that leads to house building', function() {
-        var housePage = AppHousePage();
-        housePage.get();
-        expect(1).toBe(1);
+       expect(1).toBe(1);
     });
 });
